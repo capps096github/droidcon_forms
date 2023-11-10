@@ -16,9 +16,9 @@ class CustomTextField extends StatelessWidget {
     this.obscuringCharacter,
     this.obscureText = false,
     this.initialValue,
-    this.fillColor = droidconColor,
-    this.textColor = droidconBlack,
-    this.labelTextColor = droidconBlack,
+    this.fillColor = primaryColor,
+    this.textColor = black,
+    this.labelTextColor = black,
     this.numLines = 1,
     this.textInputAction = TextInputAction.next,
     this.validator,
@@ -77,8 +77,7 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final fieldStyle =
-        fieldTextStyle ?? TextStyle(fontSize: fontSize14, color: textColor);
+    final fieldStyle = fieldTextStyle ?? TextStyle(fontSize: fontSize14, color: textColor);
 
     //
     return Column(
@@ -127,11 +126,11 @@ class CustomTextField extends StatelessWidget {
             fillColor: fillColor.withOpacity(.05),
             // * Error Styling
             errorMaxLines: 5,
-            errorStyle: const TextStyle(color: droidconRed),
+            errorStyle: const TextStyle(color: red),
             errorBorder: OutlineInputBorder(
               borderRadius: borderRadius,
               borderSide: const BorderSide(
-                color: droidconRed,
+                color: red,
                 width: 1,
                 style: BorderStyle.solid,
               ),
@@ -139,7 +138,7 @@ class CustomTextField extends StatelessWidget {
             focusedErrorBorder: OutlineInputBorder(
               borderRadius: borderRadius,
               borderSide: const BorderSide(
-                color: droidconRed,
+                color: red,
                 width: 2,
                 style: BorderStyle.solid,
               ),
@@ -156,7 +155,7 @@ class CustomTextField extends StatelessWidget {
             focusedBorder: OutlineInputBorder(
               borderRadius: borderRadius,
               borderSide: const BorderSide(
-                color: droidconColor,
+                color: primaryColor,
                 width: 2,
                 style: BorderStyle.solid,
               ),

@@ -5,8 +5,8 @@ import '../../droidcon_exporter.dart';
 class DroidconDisclaimer extends StatelessWidget {
   const DroidconDisclaimer({
     super.key,
-    this.continuingColor = droidconColor,
-    this.termsPrivacycolor = droidconSecondaryColor,
+    this.continuingColor = primaryColor,
+    this.termsPrivacycolor = secondaryColor,
   });
 
   final Color continuingColor;

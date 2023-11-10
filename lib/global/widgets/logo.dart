@@ -25,7 +25,7 @@ class AppLogo extends StatelessWidget {
       child: Icon(
         Icons.android,
         semanticLabel: 'Droidcon Logo',
-        color: color ?? (isGreen ? droidconColor : droidconWhite),
+        color: color ?? (isGreen ? primaryColor : white),
         size: logoSize,
       ),
     );

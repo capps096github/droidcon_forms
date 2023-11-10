@@ -42,8 +42,7 @@ class DateFormField extends ConsumerWidget {
             if (pickedDate != null) {
               //pickedDate output format => 2021-03-10 00:00:00.000
               printer(pickedDate);
-              String formattedDate =
-                  DateFormat('yyyy-MM-dd').format(pickedDate);
+              String formattedDate = DateFormat('yyyy-MM-dd').format(pickedDate);
               //formatted date output using intl package =>  2021-03-16
               printer(formattedDate);
 
@@ -53,10 +52,10 @@ class DateFormField extends ConsumerWidget {
           child: Container(
             decoration: BoxDecoration(
               border: Border.all(
-                color: droidconColor,
+                color: primaryColor,
                 width: 1,
               ),
-              borderRadius: borderRadius8,
+              borderRadius: formField.hasFullRadius ? borderRadius120 : borderRadius8,
             ),
             padding: const EdgeInsets.all(16),
             child: Row(
@@ -64,14 +63,12 @@ class DateFormField extends ConsumerWidget {
                 // calender icon
                 const Icon(
                   CupertinoIcons.calendar,
-                  color: droidconColor,
+                  color: primaryColor,
                 ),
                 const HorizontalSpace(of: spacing8),
                 Expanded(
                   child: Text(
-                    formValue == null
-                        ? formField.hint
-                        : DateFormat.yMMMMEEEEd().format(formValue),
+                    formValue == null ? formField.hint : DateFormat.yMMMMEEEEd().format(formValue),
                     textAlign: TextAlign.left,
                     style: const TextStyle(fontWeight: FontWeight.bold),
                   ),

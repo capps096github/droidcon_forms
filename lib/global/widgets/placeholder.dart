@@ -12,14 +12,14 @@ class DroidconPlaceholder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: droidconRandomColor,
+      color: randomColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Center(
             child: Icon(
               CupertinoIcons.circle_grid_hex_fill,
-              color: droidconWhite,
+              color: white,
               size: 80,
             ),
           ),
@@ -28,8 +28,8 @@ class DroidconPlaceholder extends StatelessWidget {
 
           // title
           Text(
-            title + droidconRandomColor.toString(),
-            style: const TextStyle(color: droidconWhite),
+            title + randomColor.toString(),
+            style: const TextStyle(color: white),
           ),
         ],
       ),

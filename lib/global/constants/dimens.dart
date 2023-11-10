@@ -18,3 +18,6 @@ const double appLogoSize = 100.0;
 
 // max width for the app auth screens
 const double maxAuthWidth = 500.0;
+
+// profile clipper height
+const double profileClipperHeight = 150.0;

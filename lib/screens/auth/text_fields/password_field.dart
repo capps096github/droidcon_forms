@@ -47,14 +47,13 @@ class _PasswordFieldState extends ConsumerState<PasswordField> {
         return null;
       },
       keyboardType: TextInputType.visiblePassword,
-      prefixIcon:
-          isObscured ? CupertinoIcons.lock_fill : CupertinoIcons.lock_open_fill,
+      prefixIcon: isObscured ? CupertinoIcons.lock_fill : CupertinoIcons.lock_open_fill,
       labelText: 'Password',
       hintText: 'Password',
       suffixIcon: IconButton(
         icon: Icon(
           isObscured ? CupertinoIcons.eye : CupertinoIcons.eye_slash,
-          color: droidconColor,
+          color: primaryColor,
           semanticLabel: isObscured ? 'show password' : 'hide password',
         ),
         onPressed: () {

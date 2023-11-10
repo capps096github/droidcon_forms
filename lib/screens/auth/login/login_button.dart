@@ -39,29 +39,26 @@ class _SignInButtonState extends ConsumerState<LogInButton> {
         if (signInFormKey.currentState!.validate()) {
           enableTap();
           // * Sign In
-          await userService
-              .login(loginCredentials: loginCredentials)
-              .then((_) async {
+          await userService.login(loginCredentials: loginCredentials).then((_) async {
             printer('Request successful!');
 
             disableTap();
             // clear the form after sign in
             signInFormKey.currentState!.reset();
 
-            // TODO go to the home page
+            //  go to the home page
             ref.read(goRouterProvider).go(homePath);
           });
         } else {
           //Error disable tap
           disableTap();
 
-          ref.read(authErrorTextProvider.notifier).state =
-              'Error Signing In. Try Again.';
+          ref.read(authErrorTextProvider.notifier).state = 'Error Signing In. Try Again.';
         }
       },
       text: "LOGIN",
-      textColor: droidconWhite,
-      buttonColor: droidconColor,
+      textColor: white,
+      buttonColor: primaryColor,
     );
   }
 

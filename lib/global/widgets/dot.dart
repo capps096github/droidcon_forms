@@ -6,7 +6,7 @@ import '../../droidcon_exporter.dart';
 class Dot extends StatelessWidget {
   const Dot({
     super.key,
-    this.dotColor = droidconColor,
+    this.dotColor = primaryColor,
     this.dotDiameter = spacing8,
     this.margin = margin4,
   });

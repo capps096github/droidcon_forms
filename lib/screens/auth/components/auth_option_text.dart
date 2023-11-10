@@ -19,7 +19,7 @@ class AuthOptionText extends ConsumerWidget {
       alignment: Alignment.center,
       child: Material(
         borderRadius: borderRadius8,
-        color: droidconTransparent,
+        color: transparent,
         child: InkWell(
           onTap: () {
             //* reset the error to an empty string
@@ -30,12 +30,11 @@ class AuthOptionText extends ConsumerWidget {
               currentFocus.unfocus();
             }
             //  go to forgot password page index
-            ref.read(authPageIndexProvider.notifier).state =
-                authpage.actionPageIndex;
+            ref.read(authPageIndexProvider.notifier).state = authpage.actionPageIndex;
           },
           borderRadius: BorderRadius.circular(8),
-          hoverColor: droidconColor.withOpacity(.05),
-          splashColor: droidconColor.withOpacity(.1),
+          hoverColor: primaryColor.withOpacity(.05),
+          splashColor: primaryColor.withOpacity(.1),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
             child: RichText(
@@ -44,14 +43,14 @@ class AuthOptionText extends ConsumerWidget {
                 text: question ?? authpage.question,
                 style: GoogleFonts.poppins(
                   fontSize: fontSize14,
-                  color: droidconBlack,
+                  color: black,
                 ),
                 children: <TextSpan>[
                   TextSpan(
                     text: "  ${authpage.action?.toUpperCase()}",
                     style: const TextStyle(
                       fontWeight: FontWeight.w900,
-                      color: droidconColor,
+                      color: primaryColor,
                     ),
                   ),
                 ],

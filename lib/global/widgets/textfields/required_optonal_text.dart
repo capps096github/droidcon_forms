@@ -20,15 +20,14 @@ class RequiredOptionalText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // background Color
-    final hintColor = (isRequired ? droidconRed : droidconColor);
+    final hintColor = (isRequired ? red : primaryColor);
 
     // text
     final hintText = isRequired ? "Required" : "Optional";
 
     // icon
-    final hintIcon = isRequired
-        ? CupertinoIcons.asterisk_circle_fill
-        : CupertinoIcons.checkmark_circle_fill;
+    final hintIcon =
+        isRequired ? CupertinoIcons.asterisk_circle_fill : CupertinoIcons.checkmark_circle_fill;
 
     return Container(
       padding: const EdgeInsets.symmetric(

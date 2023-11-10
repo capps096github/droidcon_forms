@@ -17,10 +17,9 @@ class AuthBody extends ConsumerWidget {
         return SharedAxisTransition(
           animation: animation,
           secondaryAnimation: secondaryAnimation,
-          fillColor: droidconTransparent,
-          transitionType: isMobile
-              ? SharedAxisTransitionType.scaled
-              : SharedAxisTransitionType.horizontal,
+          fillColor: transparent,
+          transitionType:
+              isMobile ? SharedAxisTransitionType.scaled : SharedAxisTransitionType.horizontal,
           child: child,
         );
       },

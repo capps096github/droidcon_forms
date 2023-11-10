@@ -21,7 +21,7 @@ class ErrorDisplay extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: errorColor,
           leading: CloseButton(
-            color: droidconWhite,
+            color: white,
             onPressed: () {
               // pop off the whatsapp screen
               context.go(homePath);
@@ -37,7 +37,7 @@ class ErrorDisplay extends StatelessWidget {
               const LeadingText(
                 padding: padding0,
                 textAlign: TextAlign.center,
-                textColor: droidconWhite,
+                textColor: white,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 title: "Oops! Something went wrong",
                 description:
@@ -59,7 +59,7 @@ class ErrorDisplay extends StatelessWidget {
               const ThickHorizontalDivider(
                 thickness: 1.5,
                 dividerWidth: double.infinity,
-                dividerColor: droidconWhite,
+                dividerColor: white,
                 margin: margin0,
               ),
               const VerticalSpace(of: spacing8),
@@ -67,9 +67,9 @@ class ErrorDisplay extends StatelessWidget {
               // go to safety
               AppButton(
                 label: "Go to Safety",
-                buttonColor: droidconWhite,
-                textColor: droidconColor,
-                iconWidget: const AppLogo(logoSize: 24, color: droidconColor),
+                buttonColor: white,
+                textColor: primaryColor,
+                iconWidget: const AppLogo(logoSize: 24, color: primaryColor),
                 onTap: () {
                   context.go(homePath);
                 },
@@ -92,7 +92,7 @@ class ErrorText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        color: droidconWhite,
+        color: white,
         borderRadius: borderRadius8,
       ),
       padding: padding16,

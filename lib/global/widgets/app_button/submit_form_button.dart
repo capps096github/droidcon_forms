@@ -11,8 +11,7 @@ class SubmitFormButton extends ConsumerStatefulWidget {
   final AppForm form;
 
   @override
-  ConsumerState<ConsumerStatefulWidget> createState() =>
-      _SubmitFormButtonState();
+  ConsumerState<ConsumerStatefulWidget> createState() => _SubmitFormButtonState();
 }
 
 class _SubmitFormButtonState extends ConsumerState<SubmitFormButton> {
@@ -75,8 +74,8 @@ class _SubmitFormButtonState extends ConsumerState<SubmitFormButton> {
         }
       },
       text: "SUBMIT",
-      textColor: droidconWhite,
-      buttonColor: droidconColor,
+      textColor: white,
+      buttonColor: primaryColor,
     );
   }
 

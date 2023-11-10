@@ -40,33 +40,29 @@ class _SignUpButtonState extends ConsumerState<SignUpButton> {
               if (signUpFormKey.currentState!.validate()) {
                 enableTap();
                 // * Sign Up
-                await userService
-                    .signUp(signUpCredentials: signUpCredentials)
-                    .then((_) async {
+                await userService.signUp(signUpCredentials: signUpCredentials).then((_) async {
                   printer('Request successful!');
 
                   disableTap();
                   // clear the form after sign in
                   signUpFormKey.currentState!.reset();
 
-                  // TODO go to the home page
+                  //  go to the home page
                   ref.read(goRouterProvider).go(homePath);
                 });
               } else {
                 //Error disable tap
                 disableTap();
 
-                ref.read(authErrorTextProvider.notifier).state =
-                    'Error Signing Up. Try Again.';
+                ref.read(authErrorTextProvider.notifier).state = 'Error Signing Up. Try Again.';
               }
             }
           : () {
               // set the error to tell the user to have matching passwords
-              ref.read(authErrorTextProvider.notifier).state =
-                  'Passwords do not match';
+              ref.read(authErrorTextProvider.notifier).state = 'Passwords do not match';
             },
-      textColor: droidconWhite,
-      buttonColor: droidconColor,
+      textColor: white,
+      buttonColor: primaryColor,
     );
   }
 

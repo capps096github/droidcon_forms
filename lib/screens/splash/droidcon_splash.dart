@@ -9,13 +9,12 @@ class DroidconSplash extends ConsumerWidget {
     final splashWaiter = ref.watch(splashWaiterProvider);
 
     return Scaffold(
-      backgroundColor: droidconWhite,
+      backgroundColor: white,
       body: splashWaiter.when(
         // go to auth page with form
         data: (_) => const Auth(),
-        loading: () => const AppLoader(iconColor: droidconColor),
-        error: (error, stackTrace) =>
-            ErrorDisplay(stackTrace: stackTrace, error: error),
+        loading: () => const AppLoader(iconColor: primaryColor),
+        error: (error, stackTrace) => ErrorDisplay(stackTrace: stackTrace, error: error),
       ),
     );
   }

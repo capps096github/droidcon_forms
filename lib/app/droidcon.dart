@@ -15,7 +15,7 @@ class Droidcon extends ConsumerWidget {
       routerConfig: goRouter,
 
       // -- Theme --
-      color: droidconColor,
+      color: primaryColor,
       theme: droidconTheme,
 
       // -- Title --

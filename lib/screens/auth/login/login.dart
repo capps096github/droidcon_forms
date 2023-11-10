@@ -1,6 +1,6 @@
 import '../../../droidcon_exporter.dart';
-import '../components/auth_heading.dart';
 import 'login_form.dart';
+import 'login_text.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({
@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
         Spacer(),
         PaddedLogo(),
         Spacer(),
-        AuthHeader(heading: "Login"),
+        LoginText(),
         VerticalSpace(of: spacing16),
         LoginForm(),
         Spacer(),

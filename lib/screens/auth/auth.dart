@@ -11,7 +11,7 @@ class DroidconAuth extends ConsumerWidget {
     // final isWelcomeFinished = !ref.watch(isWelcomeFinishedProvider);
 
     return const Scaffold(
-      backgroundColor: droidconWhite,
+      backgroundColor: white,
       // body: isWelcomeFinished ? const Auth() : const WelcomeScreen(),
       body: Auth(),
     );

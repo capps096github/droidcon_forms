@@ -10,8 +10,7 @@ class ConfirmPasswordField extends ConsumerStatefulWidget {
   });
 
   @override
-  ConsumerState<ConfirmPasswordField> createState() =>
-      _ConfirmPasswordFieldState();
+  ConsumerState<ConfirmPasswordField> createState() => _ConfirmPasswordFieldState();
 }
 
 class _ConfirmPasswordFieldState extends ConsumerState<ConfirmPasswordField> {
@@ -41,14 +40,13 @@ class _ConfirmPasswordFieldState extends ConsumerState<ConfirmPasswordField> {
         return null;
       },
       keyboardType: TextInputType.visiblePassword,
-      prefixIcon:
-          isObscured ? CupertinoIcons.lock_fill : CupertinoIcons.lock_open_fill,
+      prefixIcon: isObscured ? CupertinoIcons.lock_fill : CupertinoIcons.lock_open_fill,
       labelText: 'Confirm Password',
       hintText: 'Confirm Password',
       suffixIcon: IconButton(
         icon: Icon(
           isObscured ? CupertinoIcons.eye : CupertinoIcons.eye_slash,
-          color: droidconColor,
+          color: primaryColor,
         ),
         onPressed: () {
           setState(() {

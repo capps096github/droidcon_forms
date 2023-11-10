@@ -12,7 +12,7 @@ class ToForgotPasswordButton extends ConsumerWidget {
       alignment: Alignment.centerRight,
       child: Material(
         borderRadius: borderRadius8,
-        color: droidconTransparent,
+        color: transparent,
         child: InkWell(
           onTap: () {
             //* reset the error to an empty string
@@ -26,14 +26,14 @@ class ToForgotPasswordButton extends ConsumerWidget {
             ref.read(authPageIndexProvider.notifier).state = 2;
           },
           borderRadius: BorderRadius.circular(8),
-          hoverColor: droidconColor.withOpacity(.05),
-          splashColor: droidconColor.withOpacity(.1),
+          hoverColor: primaryColor.withOpacity(.05),
+          splashColor: primaryColor.withOpacity(.1),
           child: const Padding(
             padding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
             child: Text(
               "Forgot Password?",
               style: TextStyle(
-                color: droidconBlack,
+                color: black,
                 fontSize: fontSize14,
                 height: 1.71,
               ),

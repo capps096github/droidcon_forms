@@ -6,7 +6,7 @@ import '../../droidcon_exporter.dart';
 class ThickHorizontalDivider extends StatelessWidget {
   const ThickHorizontalDivider({
     super.key,
-    this.dividerColor = droidconColor,
+    this.dividerColor = primaryColor,
     this.thickness = kDividerThickness,
     this.dividerWidth = kHorizontalDividerWidth,
     this.margin = const EdgeInsets.symmetric(vertical: 16.0),
@@ -42,7 +42,7 @@ class ThickHorizontalDivider extends StatelessWidget {
 class SliverThickHorizontalDivider extends StatelessWidget {
   const SliverThickHorizontalDivider({
     super.key,
-    this.dividerColor = droidconColor,
+    this.dividerColor = primaryColor,
     this.thickness = kDividerThickness,
     this.dividerWidth = kHorizontalDividerWidth,
     this.margin = const EdgeInsets.symmetric(vertical: 16.0),
@@ -77,7 +77,7 @@ class SliverThickHorizontalDivider extends StatelessWidget {
 class ThickVerticalDivider extends StatelessWidget {
   const ThickVerticalDivider({
     super.key,
-    this.dividerColor = droidconColor,
+    this.dividerColor = primaryColor,
     this.thickness = kDividerThickness,
     this.dividerHeight = kVerticalDividerHeight,
     this.margin = const EdgeInsets.symmetric(vertical: 16.0),
@@ -112,7 +112,7 @@ class ThickVerticalDivider extends StatelessWidget {
 class SliverThickVerticalDivider extends StatelessWidget {
   const SliverThickVerticalDivider({
     super.key,
-    this.dividerColor = droidconColor,
+    this.dividerColor = primaryColor,
     this.thickness = kDividerThickness,
     this.dividerHeight = kVerticalDividerHeight,
     this.margin = const EdgeInsets.symmetric(vertical: 16.0),

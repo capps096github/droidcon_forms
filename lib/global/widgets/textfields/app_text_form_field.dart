@@ -17,7 +17,7 @@ class AppTextFormField extends ConsumerWidget {
 
     //
     return CustomTextField(
-      borderRadius: borderRadius8,
+      borderRadius: formField.hasFullRadius ? borderRadius120 : borderRadius8,
       restorationId: formField.label.toLowerCase(),
       customLabel: FormLabel(
         form: formField,
@@ -29,7 +29,7 @@ class AppTextFormField extends ConsumerWidget {
       hintText: formField.hint,
       fieldTextStyle: const TextStyle(
         fontSize: fontSize16,
-        color: droidconColor,
+        color: primaryColor,
       ),
       onChanged: (newValue) {
         if (formField.validatorRegex != null) {

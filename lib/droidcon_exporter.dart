@@ -40,6 +40,3 @@ export 'routes/exporter.dart';
 
 // *screens
 export 'screens/exporter.dart';
-
-// * providers
-export 'providers/exporter.dart';

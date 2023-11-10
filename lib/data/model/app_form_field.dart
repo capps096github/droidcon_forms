@@ -49,7 +49,7 @@ class AppFormField {
     required this.stateProvider,
     this.isGenderDropDown = true,
     this.isMandatory = true,
-    this.hasFullRadius = false,
+    this.hasFullRadius = true,
     this.maxLines = 1,
     this.maxLength,
     this.validatorRegex,

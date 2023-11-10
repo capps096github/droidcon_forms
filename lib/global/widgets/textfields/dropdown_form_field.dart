@@ -18,13 +18,11 @@ class DropdownFormField extends ConsumerWidget {
     final fieldValue = ref.watch(formField.stateProvider);
 
     // sorted drop down items
-    final sortedDropDownItems = formField.isGenderDropDown
-        ? formField.sortedDropDownItems
-        : formField.dropDownItems;
+    final sortedDropDownItems =
+        formField.isGenderDropDown ? formField.sortedDropDownItems : formField.dropDownItems;
 
     // initial value will be the first item in the dropdown list only if the form value is empty ''
-    final formValue =
-        fieldValue.isEmpty ? sortedDropDownItems.first : fieldValue;
+    final formValue = fieldValue.isEmpty ? sortedDropDownItems.first : fieldValue;
 
     //
     return Column(
@@ -45,11 +43,10 @@ class DropdownFormField extends ConsumerWidget {
             horizontal: spacing8,
           ),
           decoration: BoxDecoration(
-            color: droidconColor.withOpacity(.05),
-            borderRadius:
-                formField.hasFullRadius ? borderRadius120 : borderRadius8,
+            color: primaryColor.withOpacity(.05),
+            borderRadius: formField.hasFullRadius ? borderRadius120 : borderRadius8,
             border: Border.all(
-              color: droidconColor,
+              color: primaryColor,
               width: 1,
             ),
           ),
@@ -63,8 +60,8 @@ class DropdownFormField extends ConsumerWidget {
                   borderRadius: borderRadius16,
                   value: formValue,
                   alignment: Alignment.centerRight,
-                  focusColor: droidconTransparent,
-                  style: GoogleFonts.lato(color: droidconColor),
+                  focusColor: transparent,
+                  style: GoogleFonts.lato(color: primaryColor),
                   menuMaxHeight: 500,
                   icon: const EmptySpace(),
                   onChanged: (newValue) {
@@ -102,7 +99,7 @@ class DropdownFormField extends ConsumerWidget {
               const HorizontalSpace(of: spacing8),
               const Icon(
                 CupertinoIcons.chevron_down_circle_fill,
-                color: droidconColor,
+                color: primaryColor,
               ),
             ],
           ),

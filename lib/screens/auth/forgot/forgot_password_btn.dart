@@ -11,8 +11,7 @@ class ForgotPasswordButton extends ConsumerStatefulWidget {
   });
 
   @override
-  ConsumerState<ConsumerStatefulWidget> createState() =>
-      _ForgotPasswordButtonState();
+  ConsumerState<ConsumerStatefulWidget> createState() => _ForgotPasswordButtonState();
 }
 
 class _ForgotPasswordButtonState extends ConsumerState<ForgotPasswordButton> {
@@ -60,8 +59,8 @@ class _ForgotPasswordButtonState extends ConsumerState<ForgotPasswordButton> {
           });
         }
       },
-      textColor: droidconWhite,
-      buttonColor: droidconColor,
+      textColor: white,
+      buttonColor: primaryColor,
       icon: CupertinoIcons.mail_solid,
     );
   }

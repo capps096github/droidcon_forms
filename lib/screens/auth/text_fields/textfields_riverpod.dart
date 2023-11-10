@@ -33,7 +33,7 @@ final isPasswordConfirmedProvider = StateProvider<bool>((ref) {
 });
 
 // region
-final regionProvider = StateProvider<String>((ref) => selectGender);
+final regionProvider = StateProvider<String>((ref) => "");
 
 // district
 final districtProvider = StateProvider<String>((ref) => "");
@@ -115,3 +115,43 @@ final loginCredentialsProvider = Provider<LoginCredentials>((ref) {
     password: password,
   );
 });
+
+// * Current App User
+final currentUserProvider = Provider<AppUser>((ref) {
+  // is login
+  final isLogin = ref.watch(isFromLoginProvider);
+
+  // Credentials
+  final loginCredentials = ref.watch(loginCredentialsProvider);
+  final signUpCredentials = ref.watch(signUpCredentialsProvider);
+
+  // return the user accordingly
+  return isLogin
+      ? AppUser.fromLoginCredentials(loginCredentials)
+      : AppUser.fromSignUpCredentials(signUpCredentials);
+});
+
+// reset all login provider values to the default ones
+void resetAuthProviders(WidgetRef ref) {
+  // reset all the providers
+  ref.read(emailProvider.notifier).state = '';
+  ref.read(forgotEmailProvider.notifier).state = '';
+  ref.read(firstNameProvider.notifier).state = '';
+  ref.read(lastNameProvider.notifier).state = '';
+  ref.read(userNameProvider.notifier).state = '';
+  ref.read(passwordProvider.notifier).state = '';
+  ref.read(confirmPasswordProvider.notifier).state = '';
+  ref.read(isPasswordConfirmedProvider.notifier).state = false;
+  ref.read(regionProvider.notifier).state = '';
+  ref.read(districtProvider.notifier).state = '';
+  ref.read(villageProvider.notifier).state = '';
+  ref.read(countyProvider.notifier).state = '';
+  ref.read(subCountyProvider.notifier).state = '';
+  ref.read(phoneNumberProvider.notifier).state = '';
+  ref.read(nationalIdProvider.notifier).state = '';
+  ref.read(dateOfBirthProvider.notifier).state = DateTime.now();
+  ref.read(genderProvider.notifier).state = selectGender;
+  ref.read(authErrorTextProvider.notifier).state = '';
+  ref.read(authPageIndexProvider.notifier).state = 0;
+  ref.read(isResetEmailSentProvider.notifier).state = false;
+}

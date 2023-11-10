@@ -5,7 +5,7 @@ class FormLabel extends StatelessWidget {
     super.key,
     required this.form,
     required this.labelText,
-    this.labelTextColor = droidconBlack,
+    this.labelTextColor = black,
   });
 
   // form

@@ -21,7 +21,7 @@ class AuthHeader extends StatelessWidget {
       style: const TextStyle(
         fontSize: fontSize32,
         fontWeight: FontWeight.w900,
-        color: droidconBlack,
+        color: black,
       ),
     );
   }

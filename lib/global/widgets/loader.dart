@@ -3,7 +3,7 @@ import '../../droidcon_exporter.dart';
 class AppLoader extends StatelessWidget {
   const AppLoader({
     super.key,
-    this.iconColor = droidconColor,
+    this.iconColor = primaryColor,
   });
 
   // icon color

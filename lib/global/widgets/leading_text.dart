@@ -6,7 +6,7 @@ class LeadingText extends ConsumerWidget {
     required this.title,
     required this.description,
     this.padding,
-    this.textColor = droidconBlack,
+    this.textColor = black,
     this.textAlign = TextAlign.center,
     this.crossAxisAlignment = CrossAxisAlignment.center,
   });
@@ -35,9 +35,7 @@ class LeadingText extends ConsumerWidget {
 
     //
     return Padding(
-      padding: padding ??
-          const EdgeInsets.symmetric(
-              vertical: spacing24, horizontal: spacing16),
+      padding: padding ?? const EdgeInsets.symmetric(vertical: spacing24, horizontal: spacing16),
       child: Column(
         key: ValueKey(isMobile),
         mainAxisAlignment: MainAxisAlignment.center,

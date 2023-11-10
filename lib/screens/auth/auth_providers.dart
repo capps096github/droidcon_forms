@@ -7,17 +7,20 @@ final authErrorTextProvider = StateProvider<String>((_) => '');
 ///Current Index of the auth pages
 final authPageIndexProvider = StateProvider<int>((_) => 0);
 
+// is login screen when authPageIndexProvider is 0
+final isFromLoginProvider = Provider<bool>((ref) {
+  final authPageIndex = ref.watch(authPageIndexProvider);
+  return (authPageIndex == 0);
+});
+
 ///Sign Up form
-final signUpFormKeyProvider =
-    Provider<GlobalKey<FormState>>((_) => GlobalKey<FormState>());
+final signUpFormKeyProvider = Provider<GlobalKey<FormState>>((_) => GlobalKey<FormState>());
 
 ///Sign In Form
-final loginFormKeyProvider =
-    Provider<GlobalKey<FormState>>((_) => GlobalKey<FormState>());
+final loginFormKeyProvider = Provider<GlobalKey<FormState>>((_) => GlobalKey<FormState>());
 
 ///Forgot form
-final forgotFormKeyProvider =
-    Provider<GlobalKey<FormState>>((_) => GlobalKey<FormState>());
+final forgotFormKeyProvider = Provider<GlobalKey<FormState>>((_) => GlobalKey<FormState>());
 
 ///whether the email to rest password has been sent
 final isResetEmailSentProvider = StateProvider((ref) => false);

@@ -16,7 +16,7 @@ class DroidconTheme {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
-      colorSchemeSeed: droidconColor,
+      colorSchemeSeed: primaryColor,
 
       //* -- Visual Density
       visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -29,15 +29,15 @@ class DroidconTheme {
         titleTextStyle: GoogleFonts.lato(
           fontSize: 20,
           fontWeight: FontWeight.w700,
-          color: droidconWhite,
+          color: white,
         ),
       ),
 
       //* -- tooltip
       tooltipTheme: const TooltipThemeData(
-        textStyle: TextStyle(color: droidconColor),
+        textStyle: TextStyle(color: primaryColor),
         decoration: BoxDecoration(
-          color: droidconSecondaryColor,
+          color: secondaryColor,
           borderRadius: borderRadius4,
         ),
       ),

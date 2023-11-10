@@ -22,7 +22,7 @@ class AuthErrorText extends ConsumerWidget {
         // this is to add a little padding to the error text from the bottom
         margin: EdgeInsets.symmetric(vertical: isNoError ? 0 : spacing16),
         decoration: BoxDecoration(
-          color: droidconRed.withOpacity(0.8),
+          color: red.withOpacity(0.8),
           borderRadius: BorderRadius.circular(8),
         ),
         padding: padding8,
@@ -30,7 +30,7 @@ class AuthErrorText extends ConsumerWidget {
           errorText,
           textAlign: TextAlign.center,
           style: const TextStyle(
-            color: droidconWhite,
+            color: white,
             fontSize: 14,
             fontWeight: FontWeight.w500,
           ),

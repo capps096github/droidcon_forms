@@ -35,7 +35,7 @@ final droidconRouter = GoRouter(
     //TODO if the user is logged in, don't redirect to any page just continue with the initial path
     return null;
   },
-  errorBuilder: (context, state) => DroidconErrorScreen(error: state.error),
+  errorBuilder: (context, state) =>   ErrorDisplay(error: state.error.toString(), stackTrace: StackTrace.current),
   // log diagnostic info for your routes
   debugLogDiagnostics: true,
 );

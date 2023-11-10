@@ -7,8 +7,8 @@ void showToast({
   required BuildContext context,
   required String text,
   String? message,
-  Color backgroundColor = droidconColor,
-  Color textColor = droidconWhite,
+  Color backgroundColor = primaryColor,
+  Color textColor = white,
 }) async {
   // has message
   final hasMessage = message != null && message.isNotEmpty;
@@ -70,7 +70,7 @@ Future showErrorToast({
     context: context,
     text: text,
     message: message,
-    backgroundColor: droidconRed,
-    textColor: droidconWhite,
+    backgroundColor: red,
+    textColor: white,
   );
 }

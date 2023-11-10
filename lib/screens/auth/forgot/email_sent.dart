@@ -26,7 +26,7 @@ class EmailSent extends ConsumerWidget {
           textAlign: TextAlign.start,
           style: TextStyle(
             fontSize: fontSize14,
-            color: droidconBlack,
+            color: black,
           ),
         ),
         const VerticalSpace(of: spacing32),
@@ -34,7 +34,7 @@ class EmailSent extends ConsumerWidget {
           "Didn't See the Email?",
           textAlign: TextAlign.start,
           style: TextStyle(
-            color: droidconBlack,
+            color: black,
             fontSize: fontSize20,
             fontWeight: FontWeight.bold,
           ),
@@ -45,7 +45,7 @@ class EmailSent extends ConsumerWidget {
           textAlign: TextAlign.start,
           style: TextStyle(
             fontSize: fontSize14,
-            color: droidconBlack,
+            color: black,
           ),
         ),
         const VerticalSpace(of: spacing16),
@@ -56,8 +56,8 @@ class EmailSent extends ConsumerWidget {
             // Is Email Sent
             ref.read(isResetEmailSentProvider.notifier).state = false;
           },
-          textColor: droidconWhite,
-          buttonColor: droidconColor,
+          textColor: white,
+          buttonColor: primaryColor,
         ),
         const Spacer(),
         const AuthOptionText(question: "Reset Password?"),

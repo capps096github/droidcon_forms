@@ -4,8 +4,8 @@ class AppTextButton extends ConsumerWidget {
   const AppTextButton({
     super.key,
     required this.onTap,
-    this.textColor = droidconColor,
-    this.buttonColor = droidconTransparent,
+    this.textColor = primaryColor,
+    this.buttonColor = transparent,
     required this.label,
     this.toolTip,
     this.icon,

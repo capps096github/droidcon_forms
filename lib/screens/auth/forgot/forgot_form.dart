@@ -36,7 +36,7 @@ class ForgotForm extends ConsumerWidget {
                       textAlign: TextAlign.start,
                       style: TextStyle(
                         fontSize: fontSize14,
-                        color: droidconBlack,
+                        color: black,
                       ),
                     ),
                     VerticalSpace(of: spacing32),
