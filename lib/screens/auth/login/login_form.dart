@@ -2,6 +2,7 @@
 import '../../../droidcon_exporter.dart';
 import '../components/auth_error_text.dart';
 import '../components/auth_option_text.dart';
+import '../text_fields/email_field.dart';
 import '../text_fields/exporter.dart';
 import 'login_button.dart';
 
@@ -24,6 +25,10 @@ class LoginForm extends ConsumerWidget {
           children: [
             ///Email
             UsernameField(),
+            VerticalSpace(of: spacing16),
+
+            // Email
+            EmailField(),
             VerticalSpace(of: spacing16),
 
             ///Password
